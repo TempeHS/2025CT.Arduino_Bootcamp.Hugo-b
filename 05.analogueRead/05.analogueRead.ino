@@ -20,13 +20,29 @@
     https://www.tinkercad.com/things/97wMDip2Ata-bootcamp-analogueread/editel
     https://github.com/TempeHS/TempeHS_Ardunio_Bootcamp/blob/main/05.analogueRead/Bootcamp-analogueRead.png
 */
-
+static unsigned int ledPin
 
 void setup() {
-  
+ Serial.begin(9600);
+ Serial.println("Debuged");
 }
 
-void loop() {
-  
+void loop() 
+{
+  Serial.println(analogRead(A3));
+if (analogRead(A3) == 0)
+ {
+  digitalWrite(ledPin, HIGH);
+ }else if (analogRead(A3) >= 700)
+ {
+  digitalWrite(ledPin, LOW);
+ }
+  else if (analogRead(A3) >= 300)
+ {
+  digitalWrite(ledPin, HIGH);
+ }else
+ {
+  digitalWrite(ledPin, LOW)
+ }
 }
 
