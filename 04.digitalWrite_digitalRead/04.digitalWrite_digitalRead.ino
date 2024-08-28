@@ -31,7 +31,6 @@
 static unsigned int ledPin = 6;
 static unsigned int buttonPin = 5;
 bool readPin;
-bool writeValue;
 
 void setup() {
   pinMode(ledPin, OUTPUT);
